@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+    <name>Zoearth Google Optimization</name>
+    <author>zoearthmoon@gmail.com</author>
+    <creationDate>2014-11-04</creationDate>
+    <copyright>Copyright (C) 2014 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU3</license>
+    <authorEmail>zoearthmoon@gmail.com</authorEmail>
+    <authorUrl>www.zoearthmoon.net</authorUrl>
+    <version>1.0</version>
+    <description>
+    <![CDATA[
+    <div style="text-align:left">
+        <blockquote>
+        <p>您好!這是zoearth 的內容外掛.針對<h1>google 建議優化</h1></p>
+        <small>主要功能為使用
+        <br>1.javascript 加上 async 非同步
+        
+        </small>
+        </blockquote>
+    </div>
+    ]]>
+    </description>
+    <files>
+        <filename plugin="zoearth_google_optimization">zoearth_google_optimization.php</filename>
+    </files>
+    <config>
+        <fields name="params">
+			<fieldset name="basic">
+                <field name="javascript_async" type="checkbox" default="1" label="javascript 加上 async 非同步" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

@@ -3,6 +3,11 @@ defined('_JEXEC') or die ;
 
 jimport('joomla.plugin.plugin');
 
+function ref_gamer($matches)
+{
+	return urldecode($matches[1]);
+}
+
 class plgSystemZoearth_Google_Optimization extends JPlugin
 {
     function onAfterRender()
@@ -23,6 +28,17 @@ class plgSystemZoearth_Google_Optimization extends JPlugin
             {
                 $response = str_replace('span class="label label-success"><img','span ><img',$response);
             }
+			//20160208 zoearth 針對文章處理
+			if ($this->params->get('no_font_size_medium') == '1')
+			{
+				$response = str_replace('font-size: medium;','',$response);
+			}
+			
+			//20160208 zoearth ref.gamer處理
+			if ($this->params->get('ref_gamer') == '1')
+			{
+				$response = preg_replace_callback('/http:\/\/ref.gamer.com.tw\/redir\.php\?url\=([^"]*)/','ref_gamer',$response);
+			}
 			
             JResponse::setBody($response);
         }

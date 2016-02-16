@@ -7,7 +7,7 @@
     <license>GNU3</license>
     <authorEmail>zoearthmoon@gmail.com</authorEmail>
     <authorUrl>www.zoearthmoon.net</authorUrl>
-    <version>1.0</version>
+    <version>1.1.0</version>
     <description>
     <![CDATA[
     <div style="text-align:left">
@@ -29,6 +29,8 @@
 			<fieldset name="basic">
                 <field name="javascript_async" type="checkbox" default="0" label="javascript 加上 async 非同步" />
 				<field name="tag_img" type="checkbox" default="0" label="針對TAG圖片處理" />
+				<field name="no_font_size_medium" type="checkbox" default="0" label="針對font-size medium" />
+				<field name="ref_gamer" type="checkbox" default="0" label="針對ref.gamer" />
             </fieldset>
         </fields>
     </config>
